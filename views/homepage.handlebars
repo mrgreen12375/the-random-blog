@@ -1,0 +1,15 @@
+<div class="center">
+    {{#if logged_in}}
+    <a href="/create" class="create">Create New Post</a>
+    {{/if}}
+
+    {{#each blogs}}
+        <div class="card">
+            <div class="cardHeader">
+                <p>{{title}}</p>
+                <p>Posted by {{user.username}}</p>
+            </div>
+            <div class="cardContent">{{content}}</div>
+        </div>
+    {{/each}}
+</div>
